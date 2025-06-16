@@ -6,7 +6,7 @@ function LogoutButton() {
     const router = useRouter();
 
     const logout = async () => {
-        const res = await fetch("http://localhost:3000/api/auth/logout", { credentials: "include" });
+        const res = await fetch("http://zkowwococwocc8gwcs0cc40s.82.115.18.67.sslip.io/api/auth/logout", { credentials: "include" });
 
         const isNavigatableStatus = res.status === 205 || res.status === 401;
         if (isNavigatableStatus) {

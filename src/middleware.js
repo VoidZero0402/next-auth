@@ -5,7 +5,7 @@ export async function middleware(request) {
     const accessToken = cookies().get("accessToken");
 
     if (!accessToken) {
-        const res = await fetch("http://localhost:3000/api/auth/refresh", { credentials: "include", headers: { cookie: cookies().toString() } });
+        const res = await fetch("http://zkowwococwocc8gwcs0cc40s.82.115.18.67.sslip.io/api/auth/refresh", { credentials: "include", headers: { cookie: cookies().toString() } });
 
         if (res.status === 401) {
             return NextResponse.redirect(new URL("/auth/login", request.url));
@@ -19,7 +19,7 @@ export async function middleware(request) {
             name: "accessToken",
             value: cookie.accessToken,
             ...cookie.cookieOptions,
-            maxAge: cookie.cookieOptions.maxAge / 1000
+            maxAge: cookie.cookieOptions.maxAge / 1000,
         });
 
         return response;

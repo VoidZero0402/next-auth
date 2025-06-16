@@ -29,7 +29,7 @@ function Login() {
             setFieldsError({});
             setIsPending(true);
 
-            const res = await fetch("http://localhost:3000/api/auth/login", {
+            const res = await fetch("http://zkowwococwocc8gwcs0cc40s.82.115.18.67.sslip.io/api/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -44,7 +44,7 @@ function Login() {
                     await res.json();
                     const timeout = setTimeout(() => {
                         formRef.current.reset();
-                        router.replace("/panel");                        
+                        router.replace("/panel");
                         clearTimeout(timeout);
                     }, 1000);
                     break;

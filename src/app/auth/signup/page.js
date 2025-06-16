@@ -30,7 +30,7 @@ function SignUp() {
             setFieldsError({});
             setIsPending(true);
 
-            const res = await fetch("http://localhost:3000/api/auth/signup", {
+            const res = await fetch("http://zkowwococwocc8gwcs0cc40s.82.115.18.67.sslip.io/api/auth/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
